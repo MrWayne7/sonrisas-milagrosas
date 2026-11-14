@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fundación Sonrisas Milagrosas — Nosotros colocamos las sonrisas, Dios hace el milagro</title>
+<meta name="description" content="Fundación Sonrisas Milagrosas: brigadas de salud, odontología, cuidado y acompañamiento para niños, familias y adultos mayores en las veredas del Meta. Villavicencio y Acacías, Colombia.">
+<meta name="theme-color" content="#15337e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fundación Sonrisas Milagrosas">
+<meta property="og:description" content="Nosotros colocamos las sonrisas, Dios hace el milagro. Brigadas de salud y amor para las veredas del Meta.">
+<meta property="og:locale" content="es_CO">
+<meta property="og:image" content="./img/comunidad.webp">
+
+<!--
+  ================= PARA EDITAR (datos reales de la fundación) =================
+  Busca "EDITAR:" en el HTML para reemplazar:
+   - WhatsApp (wa.me/57XXXXXXXXXX)
+   - Correo
+   - Medio de donación (Nequi / Daviplata / cuenta bancaria)
+   - Cifras de impacto (section #impacto)
+  El Instagram y la ubicación (Villavicencio / Acacías, Meta) ya están puestos.
+  ============================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315337e'/%3E%3Cpath fill='%23fff' d='M14 40c6-2 10-6 13-12 2 5 6 8 12 8-3 5-9 9-15 9-4 0-8-2-10-5z'/%3E%3Cpath fill='%23f7b733' d='M39 20c4 0 7 3 7 7 0 6-5 13-13 16 2-4 3-8 2-12 4-2 6-5 4-11z'/%3E%3C/svg%3E">
+
+<style>
+:root{
+  --azul:#15337e; --azul-2:#2049c0; --azul-3:#4f74e0;
+  --rojo:#e23b2e; --rojo-2:#c22d22;
+  --oro:#f7b733; --oro-2:#ffcf5c;
+  --crema:#fff7ec; --crema-2:#fdeed6;
+  --tinta:#121a3a; --gris:#5a6076; --linea:#e7ddcd;
+  --blanco:#ffffff;
+  --radio:22px; --pad:clamp(20px,5vw,80px);
+  --sombra:0 24px 60px -24px rgba(21,51,126,.32);
+  --fdisplay:"Fraunces",Georgia,serif; --fbody:"Nunito Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.lock{overflow:hidden}
+body{font-family:var(--fbody);color:var(--tinta);background:var(--crema);line-height:1.6;overflow-x:hidden;font-weight:600}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+.wrap{width:min(1180px,100%);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{font-family:var(--fbody);font-weight:800;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rojo)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--fbody);font-weight:800;font-size:1rem;padding:.95em 1.5em;border-radius:100px;border:2px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .2s,color .2s;will-change:transform}
+.btn:hover{transform:translateY(-3px)}
+.btn-oro{background:var(--oro);color:var(--azul);box-shadow:0 12px 30px -10px rgba(247,183,51,.7)}
+.btn-oro:hover{background:var(--oro-2)}
+.btn-azul{background:var(--azul);color:#fff;box-shadow:0 12px 30px -12px rgba(21,51,126,.6)}
+.btn-azul:hover{background:var(--azul-2)}
+.btn-line{background:transparent;border-color:currentColor}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.26)}
+
+/* ---------- NAV ---------- */
+#nav{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px var(--pad);transition:background .4s,box-shadow .4s,padding .4s}
+#nav.solid{background:rgba(255,247,236,.86);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--linea);padding-block:10px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--fdisplay);font-weight:600;font-size:1.12rem;color:#fff;transition:color .4s}
+#nav.solid .brand{color:var(--azul)}
+.brand .mark{width:42px;height:42px;flex:none;border-radius:12px;background:var(--azul);display:grid;place-items:center;box-shadow:var(--sombra)}
+.brand .mark svg{width:26px;height:26px}
+.brand small{display:block;font-family:var(--fbody);font-weight:800;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
+.nav-links{display:flex;align-items:center;gap:28px;font-weight:800;font-size:.95rem}
+.nav-links a{color:#fff;opacity:.92;transition:color .4s,opacity .2s}
+.nav-links a:hover{opacity:1}
+#nav.solid .nav-links a{color:var(--tinta)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:46px;height:46px;border:none;border-radius:12px;background:rgba(255,255,255,.16);cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+#nav.solid .burger{background:rgba(21,51,126,.1)}
+.burger i{width:20px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+#nav.solid .burger i{background:var(--azul)}
+@media(max-width:920px){
+  .nav-links{display:none}
+  .nav-cta .btn-line{display:none}
+  .burger{display:flex}
+}
+/* mobile menu */
+#menu{position:fixed;inset:0;z-index:55;background:var(--azul);color:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:var(--pad);transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}
+#menu.open{transform:translateY(0);visibility:visible}
+#menu a{font-family:var(--fdisplay);font-size:2.2rem;padding:.2em 0;border-bottom:1px solid rgba(255,255,255,.14)}
+#menu .m-foot{margin-top:28px;font-family:var(--fbody);font-weight:700;opacity:.8;font-size:.95rem;line-height:1.8}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;
+  background:linear-gradient(180deg,#2c49a8 0%,#4f6fd6 34%,#9fb3ef 60%,#f6c58a 86%,#ffe3b8 100%)}
+.hero-sky{position:absolute;inset:0;overflow:hidden}
+.sun{position:absolute;left:50%;top:62%;width:min(60vw,560px);aspect-ratio:1;transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(255,240,205,.95),rgba(255,221,160,.5) 38%,transparent 66%);filter:blur(4px)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-grad-bottom{position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,var(--crema))}
+.hero-in{position:relative;z-index:3;width:min(1180px,100%);margin-inline:auto;padding:120px var(--pad) 90px;color:#fff}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);
+  padding:.5em 1em;border-radius:100px;font-weight:800;font-size:.82rem;letter-spacing:.04em;backdrop-filter:blur(6px);margin-bottom:26px}
+.hero .kicker b{color:var(--oro-2)}
+.hero h1{font-size:clamp(2.5rem,6.3vw,5.3rem);max-width:16ch;text-shadow:0 2px 30px rgba(10,20,60,.28)}
+.hero h1 .glow{color:var(--oro-2)}
+.hero p.lead{margin-top:22px;max-width:46ch;font-size:clamp(1.05rem,1.8vw,1.35rem);font-weight:700;color:rgba(255,255,255,.95);text-shadow:0 2px 20px rgba(10,20,60,.25)}
+.hero-cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px}
+.hero-scroll{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:4;color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.9}
+.hero-scroll .mouse{width:26px;height:42px;border:2px solid #fff;border-radius:16px;position:relative}
+.hero-scroll .mouse::before{content:"";position:absolute;left:50%;top:7px;width:4px;height:8px;background:#fff;border-radius:3px;transform:translateX(-50%);animation:wheel 1.5s infinite}
+@keyframes wheel{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+.hero-stats{position:absolute;right:var(--pad);bottom:34px;z-index:4;display:flex;gap:26px;color:#fff}
+.hero-stats div b{font-family:var(--fdisplay);font-size:1.8rem;display:block;line-height:1}
+.hero-stats div span{font-weight:800;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+@media(max-width:720px){.hero-stats{display:none}}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(34px)}
+.is-in .reveal,.reveal.is-in{opacity:1;transform:none;transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+
+/* ---------- MISIÓN ---------- */
+.section{padding:clamp(72px,11vw,150px) 0;position:relative}
+.mision{background:var(--crema)}
+.mision-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,72px);align-items:center}
+.mision h2{font-size:clamp(2rem,4vw,3.3rem);margin:18px 0 20px;max-width:16ch}
+.mision p{color:var(--gris);font-size:1.1rem;max-width:52ch;margin-bottom:16px}
+.mision .firma{margin-top:26px;font-family:var(--fdisplay);font-style:italic;font-size:1.3rem;color:var(--azul)}
+.mision-photo{position:relative}
+.mision-photo img{width:100%;border-radius:var(--radio);box-shadow:var(--sombra);aspect-ratio:4/5;object-fit:cover}
+.mision-photo .sello{position:absolute;right:-18px;bottom:-18px;width:120px;height:120px;border-radius:50%;background:#fff;padding:10px;box-shadow:var(--sombra);transform:rotate(-6deg)}
+.mision-photo .sello img{border-radius:50%;aspect-ratio:1;box-shadow:none}
+@media(max-width:860px){.mision-grid{grid-template-columns:1fr}.mision-photo{order:-1}}
+
+/* ---------- FRANJA LEMA ---------- */
+.lema{background:var(--azul);color:#fff;text-align:center;padding:clamp(64px,9vw,110px) 0;position:relative;overflow:hidden}
+.lema .feather{position:absolute;opacity:.12;color:var(--oro-2)}
+.lema h2{font-size:clamp(1.9rem,4.4vw,3.6rem);max-width:20ch;margin-inline:auto;position:relative;z-index:2}
+.lema h2 em{color:var(--oro-2);font-style:italic}
+.lema .src{margin-top:18px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;opacity:.7;position:relative;z-index:2}
+
+/* ---------- QUÉ HACEMOS ---------- */
+.prog{background:var(--crema-2)}
+.head-center{text-align:center;max-width:62ch;margin:0 auto clamp(40px,6vw,64px)}
+.head-center h2{font-size:clamp(2rem,4.3vw,3.4rem);margin:14px 0 14px}
+.head-center p{color:var(--gris);font-size:1.1rem}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.prog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.prog-grid{grid-template-columns:1fr}}
+.pcard{position:relative;border-radius:var(--radio);overflow:hidden;min-height:300px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;box-shadow:var(--sombra);isolation:isolate}
+.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.pcard::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,26,58,.05),rgba(18,26,58,.72) 78%)}
+.pcard:hover img{transform:scale(1.07)}
+.pcard .ic{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);display:grid;place-items:center;margin-bottom:auto}
+.pcard .ic svg{width:26px;height:26px}
+.pcard h3{font-size:1.5rem;margin:16px 0 6px}
+.pcard p{font-weight:700;font-size:.98rem;color:rgba(255,255,255,.9)}
+
+/* ---------- IMPACTO ---------- */
+.impacto{background:linear-gradient(160deg,var(--azul),#0d2158);color:#fff;position:relative;overflow:hidden}
+.impacto .ring{position:absolute;border:1.5px solid rgba(255,255,255,.08);border-radius:50%}
+.imp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;position:relative;z-index:2}
+.imp-grid .n{font-family:var(--fdisplay);font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;color:var(--oro-2)}
+.imp-grid .l{margin-top:12px;font-weight:800;letter-spacing:.04em;font-size:.98rem;opacity:.9}
+@media(max-width:720px){.imp-grid{grid-template-columns:repeat(2,1fr);gap:40px 20px}}
+.imp-note{text-align:center;margin-top:40px;font-weight:700;opacity:.65;font-size:.9rem;position:relative;z-index:2}
+
+/* ---------- GALERÍA ---------- */
+.galeria{background:var(--crema)}
+.gal-grid{columns:3;column-gap:16px}
+@media(max-width:860px){.gal-grid{columns:2}}
+@media(max-width:520px){.gal-grid{columns:1}}
+.gal-grid figure{break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 10px 30px -18px rgba(21,51,126,.5)}
+.gal-grid img{width:100%;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.gal-grid figure:hover img{transform:scale(1.06)}
+.gal-grid figcaption{position:absolute;inset:auto 0 0 0;padding:16px;color:#fff;font-weight:800;font-size:.95rem;background:linear-gradient(transparent,rgba(18,26,58,.8));opacity:0;transform:translateY(8px);transition:.3s}
+.gal-grid figure:hover figcaption{opacity:1;transform:none}
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(10,16,40,.92);display:none;align-items:center;justify-content:center;padding:28px;backdrop-filter:blur(6px)}
+#lb.open{display:flex}
+#lb img{max-width:92vw;max-height:86vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+#lb .x{position:absolute;top:22px;right:26px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.5rem;cursor:pointer}
+#lb .nav-b{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:none;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;cursor:pointer}
+#lb .prev{left:20px}#lb .next{right:20px}
+
+/* ---------- AYUDAR ---------- */
+.ayudar{background:var(--crema-2)}
+.ay-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}
+@media(max-width:860px){.ay-grid{grid-template-columns:1fr}}
+.aycard{background:#fff;border:1px solid var(--linea);border-radius:var(--radio);padding:34px 28px;box-shadow:0 20px 50px -34px rgba(21,51,126,.5);transition:transform .3s,box-shadow .3s}
+.aycard:hover{transform:translateY(-6px);box-shadow:var(--sombra)}
+.aycard .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px}
+.aycard .ic svg{width:30px;height:30px}
+.ic.rojo{background:#fde4e1;color:var(--rojo)}
+.ic.oro{background:#fdf0d4;color:#c98a0d}
+.ic.azul{background:#e2e9fb;color:var(--azul)}
+.aycard h3{font-size:1.45rem;margin-bottom:10px}
+.aycard p{color:var(--gris);font-size:1rem;margin-bottom:20px}
+.aycard .btn{width:100%;justify-content:center}
+.dona-box{margin-top:14px;background:var(--crema);border:1px dashed var(--azul-3);border-radius:14px;padding:14px 16px;font-size:.92rem;font-weight:800;color:var(--azul);text-align:center}
+
+/* ---------- CONTACTO / FOOTER ---------- */
+.foot{background:var(--azul);color:#fff;padding:clamp(64px,9vw,110px) 0 40px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+@media(max-width:800px){.foot-top{grid-template-columns:1fr;gap:34px}}
+.foot h3{font-family:var(--fdisplay);font-size:2.2rem;max-width:14ch;margin-bottom:14px}
+.foot .sub{opacity:.82;font-weight:700;max-width:40ch;margin-bottom:22px}
+.foot h4{font-family:var(--fbody);font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem;opacity:.7;margin-bottom:14px}
+.foot a.row{display:flex;align-items:center;gap:10px;padding:7px 0;font-weight:700;opacity:.92;transition:opacity .2s,transform .2s}
+.foot a.row:hover{opacity:1;transform:translateX(4px)}
+.foot a.row svg{width:20px;height:20px;flex:none;color:var(--oro-2)}
+.foot .clock{font-family:var(--fdisplay);font-size:1.4rem}
+.foot-base{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-weight:700;font-size:.85rem;opacity:.72}
+.foot-base a{color:var(--oro-2)}
+</style>
+</head>
+<body>
+
+<!-- defs: dove + wings -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="dove" viewBox="0 0 64 44">
+    <path fill="currentColor" d="M3 30c9-1 16-6 20-14 1.6 5.4 6 9 12 9.2-1 6-5.5 11-13 12.6 5.2 1.4 10.4-.4 14-4-1 7.6-7.4 13.4-15.3 13.4C24 60.2 10 48 3 30z" transform="translate(0,-6)"/>
+    <path fill="currentColor" d="M35 10c5.6 0 9.8 4 9.8 9.6 0 1.2-.2 2.3-.5 3.4C50 20 56 15 60 8c-2 10-9 18-19 20.6"/>
+  </symbol>
+</defs></svg>
+
+<nav id="nav">
+  <a class="brand" href="#top" aria-label="Sonrisas Milagrosas, inicio">
+    <span class="mark"><svg viewBox="0 0 64 44"><use href="#dove" fill="#fff"/></svg></span>
+    <span>Sonrisas Milagrosas<small>Fundación · Meta, Colombia</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#mision">La fundación</a>
+    <a href="#prog">Qué hacemos</a>
+    <a href="#impacto">Impacto</a>
+    <a href="#galeria">Momentos</a>
+    <a href="/3d">Vive la historia</a>
+  </div>
+  <div class="nav-cta">
+    <a class="btn btn-line" href="#ayudar" style="padding:.7em 1.1em;font-size:.92rem">Ser voluntario</a>
+    <a class="btn btn-oro" href="#ayudar" style="padding:.7em 1.3em;font-size:.92rem">Donar</a>
+    <button class="burger" id="burger" aria-label="Abrir menú"><i></i><i></i><i></i></button>
+  </div>
+</nav>
+
+<div id="menu">
+  <a href="#mision">La fundación</a>
+  <a href="#prog">Qué hacemos</a>
+  <a href="#impacto">Impacto</a>
+  <a href="#galeria">Momentos</a>
+  <a href="#ayudar">Cómo ayudar</a>
+  <a href="/3d">Vive la historia →</a>
+  <div class="m-foot">Villavicencio &amp; Acacías · Meta<br>Nosotros colocamos las sonrisas, Dios hace el milagro.</div>
+</div>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero-sky"><div class="sun"></div><canvas id="doves"></canvas></div>
+  <div class="hero-grad-bottom"></div>
+  <div class="hero-in">
+    <span class="kicker">✦ Fundación sin ánimo de lucro · <b>Meta, Colombia</b></span>
+    <h1>Nosotros colocamos las sonrisas, <span class="glow">Dios hace el milagro.</span></h1>
+    <p class="lead">Llevamos brigadas de salud, cuidado y amor a los niños, las familias y los adultos mayores de las veredas del Meta. Cada jornada, una sonrisa que se queda.</p>
+    <div class="hero-cta">
+      <a class="btn btn-oro" href="#ayudar">Quiero ayudar</a>
+      <a class="btn btn-ghost" href="/3d">Vive la historia <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div><b data-count="13">0</b><span>Jornadas</span></div>
+    <div><b data-count="6">0</b><span>Veredas</span></div>
+    <div><b data-count="900" data-suffix="+">0</b><span>Sonrisas</span></div>
+  </div>
+  <a class="hero-scroll" href="#mision"><span class="mouse"></span>Desliza</a>
+</header>
+
+<main id="main">
+
+<!-- ================= MISIÓN ================= -->
+<section class="section mision" id="mision">
+  <div class="wrap mision-grid">
+    <div class="mision-text">
+      <span class="eyebrow reveal">Quiénes somos</span>
+      <h2 class="reveal">Una fundación que se mueve hasta donde están las familias.</h2>
+      <p class="reveal">Sonrisas Milagrosas nació del servicio. Llegamos a las veredas y los barrios del Meta con brigadas de salud, odontología, optometría, cuidado personal y acompañamiento, de la mano de voluntarios que creen que ayudar es la forma más grande de ser sencillo.</p>
+      <p class="reveal">No esperamos a que las personas lleguen: vamos nosotros. Donde hace falta una mano, una consulta o una sonrisa, ahí estamos.</p>
+      <p class="firma reveal">“Que nadie venga a ti, sin irse mejor y más feliz.”<br><span style="font-size:.9rem;font-style:normal;font-family:var(--fbody);font-weight:800;opacity:.6">— Santa Teresa de Calcuta</span></p>
+    </div>
+    <div class="mision-photo reveal">
+      <img src="./img/equipo.webp" alt="Equipo de voluntarios de la Fundación Sonrisas Milagrosas frente al Hogar Geriátrico San Gerardo">
+      <div class="sello"><img src="./img/logo-ig.webp" alt="Logo Fundación Sonrisas Milagrosas"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRANJA LEMA ================= -->
+<section class="lema">
+  <svg class="feather" style="left:6%;top:20%;width:90px;transform:rotate(-18deg)"><use href="#dove"/></svg>
+  <svg class="feather" style="right:8%;bottom:16%;width:120px;transform:rotate(14deg)"><use href="#dove"/></svg>
+  <div class="wrap">
+    <h2 class="reveal">Quien no vive para servir, <em>no sirve para vivir.</em></h2>
+    <div class="src reveal">El corazón de cada jornada</div>
+  </div>
+</section>
+
+<!-- ================= QUÉ HACEMOS ================= -->
+<section class="section prog" id="prog">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="eyebrow reveal">Qué hacemos</span>
+      <h2 class="reveal">Cada jornada reúne muchas manos en un mismo lugar.</h2>
+      <p class="reveal">Montamos la brigada completa en salones comunales, escuelas y hogares de las veredas, para que una familia resuelva en un solo día lo que de otro modo le tomaría meses.</p>
+    </div>
+    <div class="prog-grid">
+      <article class="pcard reveal"><img src="./img/salud.webp" alt="Brigada de salud">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></div>
+        <h3>Brigadas de salud</h3><p>Consulta médica general y valoración para niños, adultos y mayores.</p></article>
+      <article class="pcard reveal"><img src="./img/odonto.webp" alt="Odontología">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 3c3 0 5 1.5 5 4 0 3-1 4-1.3 8-.2 2.5-1 4-1.7 4s-1-2-2-2-1.3 2-2 2-1.5-1.5-1.7-4C7 11 6 10 6 7c0-2.5 2-4 5-4z"/></svg></div>
+        <h3>Odontología</h3><p>Limpieza, revisión y tratamiento dental para toda la comunidad.</p></article>
+      <article class="pcard reveal"><img src="./img/vision.webp" alt="Optometría">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Optometría y visión</h3><p>Tamizaje visual y entrega de lentes para ver mejor el mundo.</p></article>
+      <article class="pcard reveal"><img src="./img/bienestar.webp" alt="Bienestar y cuidado">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M6 3v6M3 6h6"/><path d="M14 4l6 6-9 9H5v-6z"/></svg></div>
+        <h3>Bienestar y cuidado</h3><p>Cortes de cabello y cuidado personal que devuelven la dignidad.</p></article>
+      <article class="pcard reveal"><img src="./img/taller.webp" alt="Niñez y talleres">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <h3>Niñez y talleres</h3><p>Juego, arte y acompañamiento para que los niños sean niños.</p></article>
+      <article class="pcard reveal"><img src="./img/mayores.webp" alt="Adultos mayores">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Adultos mayores</h3><p>Visitas y jornadas en hogares geriátricos, para que nadie esté solo.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMPACTO ================= -->
+<section class="section impacto" id="impacto">
+  <span class="ring" style="width:420px;height:420px;top:-120px;left:-100px"></span>
+  <span class="ring" style="width:640px;height:640px;bottom:-240px;right:-180px"></span>
+  <div class="wrap">
+    <div class="head-center reveal" style="color:#fff">
+      <span class="eyebrow" style="color:var(--oro-2)">El fruto del servicio</span>
+      <h2 style="color:#fff">Lo que se multiplica cuando aparecemos.</h2>
+    </div>
+    <!-- EDITAR: confirma estas cifras con la fundación -->
+    <div class="imp-grid">
+      <div class="reveal"><div class="n" data-count="13">0</div><div class="l">Jornadas realizadas</div></div>
+      <div class="reveal"><div class="n" data-count="6">0</div><div class="l">Veredas visitadas</div></div>
+      <div class="reveal"><div class="n" data-count="900" data-suffix="+">0</div><div class="l">Personas atendidas</div></div>
+      <div class="reveal"><div class="n" data-count="40" data-suffix="+">0</div><div class="l">Voluntarios</div></div>
+    </div>
+    <p class="imp-note reveal">* Cifras aproximadas — las ajustamos con los datos reales de la fundación.</p>
+  </div>
+</section>
+
+<!-- ================= GALERÍA ================= -->
+<section class="section galeria" id="galeria">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="eyebrow reveal">Momentos</span>
+      <h2 class="reveal">Cada rostro es un milagro que ya empezó.</h2>
+    </div>
+    <div class="gal-grid" id="gal">
+      <figure data-full="./img/comunidad.webp"><img src="./img/comunidad.webp" alt="Jornada en una vereda del Meta" loading="lazy"><figcaption>Jornada en la vereda</figcaption></figure>
+      <figure data-full="./img/ninez.webp"><img src="./img/ninez.webp" alt="Acompañamiento a los niños" loading="lazy"><figcaption>Los niños primero</figcaption></figure>
+      <figure data-full="./img/odonto.webp"><img src="./img/odonto.webp" alt="Brigada de odontología" loading="lazy"><figcaption>Odontología</figcaption></figure>
+      <figure data-full="./img/mayores2.webp"><img src="./img/mayores2.webp" alt="Jornada con adultos mayores" loading="lazy"><figcaption>Con nuestros mayores</figcaption></figure>
+      <figure data-full="./img/jornada.webp"><img src="./img/jornada.webp" alt="Comunidad reunida" loading="lazy"><figcaption>Toda la comunidad</figcaption></figure>
+      <figure data-full="./img/donacion.webp"><img src="./img/donacion.webp" alt="Entrega de ayudas" loading="lazy"><figcaption>Entrega de ayudas</figcaption></figure>
+      <figure data-full="./img/vereda.webp"><img src="./img/vereda.webp" alt="Brigada al aire libre" loading="lazy"><figcaption>Hasta la última casa</figcaption></figure>
+      <figure data-full="./img/alegria.webp"><img src="./img/alegria.webp" alt="Familias y voluntarios" loading="lazy"><figcaption>Alegría compartida</figcaption></figure>
+      <figure data-full="./img/ropa.webp"><img src="./img/ropa.webp" alt="Entrega de ropa" loading="lazy"><figcaption>Lo necesario, con cariño</figcaption></figure>
+      <figure data-full="./img/sonrisa.webp"><img src="./img/sonrisa.webp" alt="Una sonrisa" loading="lazy"><figcaption>El milagro de una sonrisa</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AYUDAR ================= -->
+<section class="section ayudar" id="ayudar">
+  <div class="wrap">
+    <div class="head-center">
+      <span class="eyebrow reveal">Cómo ayudar</span>
+      <h2 class="reveal">Tu ayuda se convierte en una jornada más.</h2>
+      <p class="reveal">Con muy poco llega la brigada a una vereda entera. Hay muchas formas de poner tu sonrisa en esta obra.</p>
+    </div>
+    <div class="ay-grid">
+      <div class="aycard reveal">
+        <div class="ic oro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
+        <h3>Dona</h3>
+        <p>Cada aporte cubre transporte, insumos médicos y refrigerios para los niños.</p>
+        <!-- EDITAR: medio de donación real -->
+        <div class="dona-box">Nequi / Daviplata: <br>[ número aquí ]</div>
+        <a class="btn btn-oro" href="#" style="margin-top:14px" id="cta-donar">Quiero donar</a>
+      </div>
+      <div class="aycard reveal">
+        <div class="ic rojo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5"/><path d="M16 4.5a3.2 3.2 0 010 6.4M18 20c0-2.6-1-4.3-2.5-5.2"/></svg></div>
+        <h3>Sé voluntario</h3>
+        <p>Médicos, odontólogos, estilistas o manos para organizar: toda ayuda suma.</p>
+        <a class="btn btn-azul" href="#contacto" style="margin-top:14px">Unirme al equipo</a>
+      </div>
+      <div class="aycard reveal">
+        <div class="ic azul"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7"/><path d="M12 3v13M7 8l5-5 5 5"/></svg></div>
+        <h3>Difunde</h3>
+        <p>Comparte nuestra obra. Una historia que se cuenta llega a más corazones.</p>
+        <a class="btn btn-line" href="https://www.instagram.com/fund._sonrisas_milagrosas/" target="_blank" rel="noopener" style="margin-top:14px;color:var(--azul)">Seguir en Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= CONTACTO / FOOTER ================= -->
+<footer class="foot" id="contacto">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <svg style="width:54px;height:40px;color:var(--oro-2);margin-bottom:16px"><use href="#dove"/></svg>
+        <h3>Pongamos juntos la próxima sonrisa.</h3>
+        <p class="sub">Escríbenos si quieres donar, ser voluntario o invitarnos a tu comunidad. Respondemos con el corazón.</p>
+        <a class="btn btn-oro" href="https://www.instagram.com/fund._sonrisas_milagrosas/" target="_blank" rel="noopener">Escríbenos por Instagram</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <!-- EDITAR: WhatsApp y correo reales -->
+        <a class="row" href="https://wa.me/57XXXXXXXXXX" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.8l-.3-.2-2.8.7.7-2.7-.2-.3A8 8 0 0112 4z"/></svg>WhatsApp</a>
+        <a class="row" href="mailto:hola@sonrisasmilagrosas.org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Correo</a>
+        <a class="row" href="https://www.instagram.com/fund._sonrisas_milagrosas/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@fund._sonrisas_milagrosas</a>
+      </div>
+      <div>
+        <h4>Dónde estamos</h4>
+        <a class="row" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Villavicencio &amp; Acacías, Meta</a>
+        <div style="margin-top:18px"><h4>Hora local</h4><div class="clock" id="clock">--:--:--</div></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Fundación Sonrisas Milagrosas · {{AÑO}} · Colombia</span>
+      <span>Sitio diseñado por <a href="https://www.instagram.com/" target="_blank" rel="noopener">BASHI</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div id="lb"><button class="x" aria-label="Cerrar">✕</button><button class="nav-b prev" aria-label="Anterior">‹</button><img src="" alt=""><button class="nav-b next" aria-label="Siguiente">›</button></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  'use strict';
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* año */
+  document.body.innerHTML=document.body.innerHTML.replace('{{AÑO}}',new Date().getFullYear());
+
+  /* nav solid */
+  var nav=$('#nav');
+  function onScroll(){nav.classList.toggle('solid',window.scrollY>40)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* menú móvil */
+  var burger=$('#burger'),menu=$('#menu');
+  function setMenu(o){menu.classList.toggle('open',o);document.documentElement.classList.toggle('lock',o)}
+  burger.addEventListener('click',function(){setMenu(!menu.classList.contains('open'))});
+  $$('a',menu).forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  /* reloj Meta (hora Colombia) */
+  var clock=$('#clock');
+  function tick(){try{clock.textContent=new Intl.DateTimeFormat('es-CO',{hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false,timeZone:'America/Bogota'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,1000);
+
+  /* Lenis smooth scroll (solo ratón/trackpad) */
+  var lenis=null;
+  if(!reduce && window.Lenis && matchMedia('(hover:hover) and (pointer:fine)').matches){
+    lenis=new Lenis({lerp:.09,wheelMultiplier:.9});
+    function raf(t){lenis.raf(t);requestAnimationFrame(raf)}requestAnimationFrame(raf);
+    document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var el=$(a.getAttribute('href'));if(!el)return;e.preventDefault();lenis.scrollTo(el,{offset:-70,duration:1.3})});
+  }
+
+  /* GSAP reveals + contadores */
+  if(window.gsap){
+    gsap.registerPlugin(ScrollTrigger);
+    if(lenis)lenis.on('scroll',ScrollTrigger.update);
+    $$('.reveal').forEach(function(el){
+      gsap.to(el,{scrollTrigger:{trigger:el,start:'top 86%'},opacity:1,y:0,duration:.9,ease:'power3.out'});
+    });
+    // parallax hero text
+    gsap.to('.hero-in',{scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true},y:120,opacity:.3,ease:'none'});
+    // contadores
+    $$('[data-count]').forEach(function(el){
+      var end=+el.getAttribute('data-count'),suf=el.getAttribute('data-suffix')||'';
+      var o={v:0};
+      ScrollTrigger.create({trigger:el,start:'top 90%',once:true,onEnter:function(){
+        gsap.to(o,{v:end,duration:1.6,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(o.v)+suf}});
+      }});
+    });
+  }else{
+    $$('.reveal').forEach(function(el){el.style.opacity=1;el.style.transform='none'});
+    $$('[data-count]').forEach(function(el){el.textContent=el.getAttribute('data-count')+(el.getAttribute('data-suffix')||'')});
+  }
+
+  /* ---------- aves en el héroe (canvas) ---------- */
+  (function(){
+    var cv=$('#doves');if(!cv)return;var ctx=cv.getContext('2d');var W,H,dpr,zones=[];
+    function size(){dpr=Math.min(2,window.devicePixelRatio||1);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);safe()}
+    /* zona de exclusión: titular, bajada y kicker (para que las aves no parezcan tildes) */
+    function safe(){
+      zones=[];var base=cv.getBoundingClientRect();
+      $$('.hero h1,.hero .lead,.hero .kicker,.hero-cta').forEach(function(el){
+        var r=el.getBoundingClientRect();zones.push({x:r.left-base.left-26,y:r.top-base.top-20,w:r.width+52,h:r.height+40});
+      });
+    }
+    size();window.addEventListener('resize',size);window.addEventListener('scroll',safe,{passive:true});
+    function clearK(x,y){ /* 0 = sobre el texto, 1 = cielo libre */
+      for(var i=0;i<zones.length;i++){var z=zones[i];
+        if(x>z.x-24&&x<z.x+z.w+24&&y>z.y-24&&y<z.y+z.h+24){
+          var dx=Math.min(x-z.x,z.x+z.w-x),dy=Math.min(y-z.y,z.y+z.h-y);
+          if(x>z.x&&x<z.x+z.w&&y>z.y&&y<z.y+z.h)return 0;
+          return Math.min(1,Math.max(0,Math.min(dx,dy)/24));
+        }
+      }return 1;
+    }
+    var N=reduce?6:15,birds=[];
+    for(var i=0;i<N;i++)birds.push({x:Math.random()*W,y:Math.random()*H*.9,s:.5+Math.random()*1.1,sp:.25+Math.random()*.5,ph:Math.random()*6.28,dr:Math.random()*.4-.2});
+    function wing(b,t,a){
+      var f=Math.sin(t*2.2*b.sp+b.ph);var span=10*b.s,lift=f*7*b.s;
+      ctx.save();ctx.translate(b.x,b.y);ctx.globalAlpha=a*.9;
+      ctx.strokeStyle='rgba(255,255,255,'+(.55+.3*b.s)+')';ctx.lineWidth=1.6*b.s;ctx.lineCap='round';
+      ctx.beginPath();ctx.moveTo(-span,0);ctx.quadraticCurveTo(-span*.4,-lift,0,0);ctx.quadraticCurveTo(span*.4,-lift,span,0);ctx.stroke();
+      ctx.restore();
+    }
+    var t0=performance.now();
+    function loop(now){var t=(now-t0)/1000;ctx.clearRect(0,0,W,H);
+      for(var i=0;i<birds.length;i++){var b=birds[i];b.x+=b.sp*(.6+b.s)*.6;b.y+=b.dr*.2;if(b.x>W+30){b.x=-30;b.y=Math.random()*H*.9}
+        var a=clearK(b.x,b.y);if(a>0.02)wing(b,t,a);}
+      requestAnimationFrame(loop)}
+    requestAnimationFrame(loop);
+  })();
+
+  /* ---------- lightbox ---------- */
+  (function(){
+    var lb=$('#lb'),img=$('#lb img'),figs=$$('#gal figure'),idx=0;
+    function open(i){idx=(i+figs.length)%figs.length;img.src=figs[idx].getAttribute('data-full');lb.classList.add('open');document.documentElement.classList.add('lock')}
+    function close(){lb.classList.remove('open');document.documentElement.classList.remove('lock')}
+    figs.forEach(function(f,i){f.addEventListener('click',function(){open(i)})});
+    $('#lb .x').addEventListener('click',close);
+    $('#lb .next').addEventListener('click',function(e){e.stopPropagation();open(idx+1)});
+    $('#lb .prev').addEventListener('click',function(e){e.stopPropagation();open(idx-1)});
+    lb.addEventListener('click',function(e){if(e.target===lb)close()});
+    document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')open(idx+1);if(e.key==='ArrowLeft')open(idx-1)});
+  })();
+})();
+</script>
+</body>
+</html>
