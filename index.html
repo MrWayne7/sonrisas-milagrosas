@@ -10,7 +10,13 @@
 <meta property="og:title" content="Fundación Sonrisas Milagrosas">
 <meta property="og:description" content="Nosotros colocamos las sonrisas, Dios hace el milagro. Brigadas de salud y amor para las veredas del Meta.">
 <meta property="og:locale" content="es_CO">
-<meta property="og:image" content="./img/comunidad.webp">
+<meta property="og:url" content="https://sonrisas-milagrosas.pages.dev/">
+<meta property="og:image" content="https://sonrisas-milagrosas.pages.dev/img/comunidad.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sonrisas-milagrosas.pages.dev/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"NGO","name":"Fundación Sonrisas Milagrosas","alternateName":"Sonrisas Milagrosas","url":"https://sonrisas-milagrosas.pages.dev/","slogan":"Nosotros colocamos las sonrisas, Dios hace el milagro","description":"Fundación sin ánimo de lucro que lleva brigadas de salud, cuidado y acompañamiento a las veredas del Meta, Colombia.","areaServed":[{"@type":"City","name":"Villavicencio"},{"@type":"City","name":"Acacías"}],"address":{"@type":"PostalAddress","addressRegion":"Meta","addressCountry":"CO"},"sameAs":["https://www.instagram.com/fund._sonrisas_milagrosas/"],"potentialAction":{"@type":"DonateAction","target":"https://sonrisas-milagrosas.pages.dev/donar/"}}
+</script>
 
 <!--
   ================= PARA EDITAR (datos reales de la fundación) =================
@@ -181,6 +187,10 @@ h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spa
 #lb .x{position:absolute;top:22px;right:26px;width:48px;height:48px;border:none;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.5rem;cursor:pointer}
 #lb .nav-b{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:none;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;font-size:1.6rem;cursor:pointer}
 #lb .prev{left:20px}#lb .next{right:20px}
+/* WhatsApp flotante */
+.wa{position:fixed;right:20px;bottom:20px;z-index:70;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#07321a;font-weight:800;padding:14px 18px;border-radius:100px;box-shadow:0 14px 34px -10px rgba(7,50,26,.5);transition:transform .25s}
+.wa:hover{transform:translateY(-3px)}.wa svg{width:24px;height:24px;flex:none}
+@media(max-width:600px){.wa .t{display:none}.wa{padding:16px;right:16px;bottom:16px}}
 
 /* ---------- AYUDAR ---------- */
 .ayudar{background:var(--crema-2)}
@@ -236,18 +246,19 @@ h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spa
     <a href="/3d">Vive la historia</a>
   </div>
   <div class="nav-cta">
-    <a class="btn btn-line" href="#ayudar" style="padding:.7em 1.1em;font-size:.92rem">Ser voluntario</a>
-    <a class="btn btn-oro" href="#ayudar" style="padding:.7em 1.3em;font-size:.92rem">Donar</a>
+    <a class="btn btn-line" href="/voluntariado/" style="padding:.7em 1.1em;font-size:.92rem">Ser voluntario</a>
+    <a class="btn btn-oro" href="/donar/" style="padding:.7em 1.3em;font-size:.92rem">Donar</a>
     <button class="burger" id="burger" aria-label="Abrir menú"><i></i><i></i><i></i></button>
   </div>
 </nav>
 
 <div id="menu">
   <a href="#mision">La fundación</a>
-  <a href="#prog">Qué hacemos</a>
-  <a href="#impacto">Impacto</a>
-  <a href="#galeria">Momentos</a>
-  <a href="#ayudar">Cómo ayudar</a>
+  <a href="/impacto/">Impacto</a>
+  <a href="/historias/">Historias</a>
+  <a href="/voluntariado/">Voluntariado</a>
+  <a href="/transparencia/">Transparencia</a>
+  <a href="/donar/">Donar</a>
   <a href="/3d">Vive la historia →</a>
   <div class="m-foot">Villavicencio &amp; Acacías · Meta<br>Nosotros colocamos las sonrisas, Dios hace el milagro.</div>
 </div>
@@ -390,13 +401,13 @@ h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spa
         <p>Cada aporte cubre transporte, insumos médicos y refrigerios para los niños.</p>
         <!-- EDITAR: medio de donación real -->
         <div class="dona-box">Nequi / Daviplata: <br>[ número aquí ]</div>
-        <a class="btn btn-oro" href="#" style="margin-top:14px" id="cta-donar">Quiero donar</a>
+        <a class="btn btn-oro" href="/donar/" style="margin-top:14px" id="cta-donar">Quiero donar</a>
       </div>
       <div class="aycard reveal">
         <div class="ic rojo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5"/><path d="M16 4.5a3.2 3.2 0 010 6.4M18 20c0-2.6-1-4.3-2.5-5.2"/></svg></div>
         <h3>Sé voluntario</h3>
         <p>Médicos, odontólogos, estilistas o manos para organizar: toda ayuda suma.</p>
-        <a class="btn btn-azul" href="#contacto" style="margin-top:14px">Unirme al equipo</a>
+        <a class="btn btn-azul" href="/voluntariado/" style="margin-top:14px">Unirme al equipo</a>
       </div>
       <div class="aycard reveal">
         <div class="ic azul"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7"/><path d="M12 3v13M7 8l5-5 5 5"/></svg></div>
@@ -419,6 +430,9 @@ h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spa
         <h3>Pongamos juntos la próxima sonrisa.</h3>
         <p class="sub">Escríbenos si quieres donar, ser voluntario o invitarnos a tu comunidad. Respondemos con el corazón.</p>
         <a class="btn btn-oro" href="https://www.instagram.com/fund._sonrisas_milagrosas/" target="_blank" rel="noopener">Escríbenos por Instagram</a>
+        <nav style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 18px;font-weight:800;font-size:.92rem">
+          <a href="/donar/" style="opacity:.9">Donar</a><a href="/impacto/" style="opacity:.9">Impacto</a><a href="/historias/" style="opacity:.9">Historias</a><a href="/voluntariado/" style="opacity:.9">Voluntariado</a><a href="/transparencia/" style="opacity:.9">Transparencia</a><a href="/3d" style="opacity:.9">Vive la historia</a>
+        </nav>
       </div>
       <div>
         <h4>Contacto</h4>
@@ -439,6 +453,9 @@ h1,h2,h3{font-family:var(--fdisplay);font-weight:600;line-height:1.05;letter-spa
     </div>
   </div>
 </footer>
+
+<!-- WhatsApp flotante — EDITAR número -->
+<a class="wa" href="https://wa.me/57XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.8l-.3-.2-2.8.7.7-2.7-.2-.3A8 8 0 0112 4z"/></svg><span class="t">Escríbenos</span></a>
 
 <!-- lightbox -->
 <div id="lb"><button class="x" aria-label="Cerrar">✕</button><button class="nav-b prev" aria-label="Anterior">‹</button><img src="" alt=""><button class="nav-b next" aria-label="Siguiente">›</button></div>
